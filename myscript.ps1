@@ -21,3 +21,14 @@ else
 echo "installing nano" 
 choco install nano
 }
+
+echo "checking if git is installed"
+if (get-command git)
+{
+echo "git is already installed" 
+}
+else
+{
+echo "installing git" 
+choco install git
+}
