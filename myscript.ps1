@@ -30,5 +30,5 @@ echo "git is already installed"
 else
 {
 echo "installing git" 
-choco install git
+choco install git -y --params="'/GitAndUnixToolsOnPath /NoAutoCrlf'"
 }
