@@ -30,5 +30,11 @@ echo "git is already installed"
 else
 {
 echo "installing git" 
-choco install git -y --params="'/GitAndUnixToolsOnPath /NoAutoCrlf'"
+choco install git.install -y --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
 }
+
+#Refresh Environment
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + 
+[System.Environment]::GetEnvironmentVariable("Path","User")
+refreshenv
+Import-Module "$env:ProgramData\chocolatey\helpers\chocolateyInstaller.psm1"; Update-SessionEnvironment
