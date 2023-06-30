@@ -14,6 +14,6 @@ Always run the ps1 script as administrator with the command below:
 Run the bash script with the code below
 
 ```shell
-./myscript.sh
+bash ./myscript.sh
 ```
 
