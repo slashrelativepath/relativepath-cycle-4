@@ -1,4 +1,4 @@
-# powershell script to install chocolatey 
+# build a local web server  
 
 echo "checking if chocolatey installed"
 if (get-command choco)
@@ -31,6 +31,17 @@ else
 {
 echo "installing git" 
 choco install git.install -y --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
+}
+
+echo "installing multipass hypervisor"
+if (get-command multipass)
+{
+echo "multipass already installed" 
+} 
+else 
+{
+echo "installing multipass" 
+choco install multipass
 }
 
 #Refresh Environment
