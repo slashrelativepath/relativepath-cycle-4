@@ -41,11 +41,11 @@ echo "multipass already installed"
 else 
 {
 echo "installing multipass" 
-choco install multipass
+choco install -y virtualbox --params "'/NoDesktopShortcut /ExtensionPack'"
+choco install -y multipass --force --params "'/HyperVisor:VirtualBox'"
 }
 
 #Refresh Environment
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + 
-[System.Environment]::GetEnvironmentVariable("Path","User")
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 refreshenv
 Import-Module "$env:ProgramData\chocolatey\helpers\chocolateyInstaller.psm1"; Update-SessionEnvironment
