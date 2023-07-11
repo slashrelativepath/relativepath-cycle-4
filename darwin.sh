@@ -3,7 +3,7 @@
 # shell script to install homebrew
 
 # check operating system
-if [ "$uname" = 'Darwin' ]
+if [ "$(uname)" = 'Darwin' ]
 then
   
   echo "checking if brew is installed"  
@@ -33,6 +33,19 @@ then
     brew install git
   fi
 
+  echo  "checking if multipass installed"
+  if (which multipass) 
+  then 
+    echo "multipass already installed" 
+  else
+    echo "installing multipass"
+    brew install --cask multipass
+  fi
+ 
 else
   echo "This script is only for Mac. You are using $(uname). Please run the script for $(uname)."
 fi
+
+echo "launching multipass vm"
+multipass launch --name relativepath
+
