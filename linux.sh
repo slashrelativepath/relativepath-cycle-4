@@ -2,5 +2,9 @@ if (which multipass)
 then
   echo "multipass already install"
 else
-  sudo apt install multipass
+  sudo snap install multipass
 fi
+
+echo "lauching relativepath vm" 
+multipass launch --name relativepath
+
