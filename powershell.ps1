@@ -19,7 +19,7 @@ echo "nano is already installed"
 else
 {
 echo "installing nano" 
-choco install nano
+choco install -y nano
 }
 
 echo "checking if git is installed"
@@ -49,3 +49,5 @@ choco install -y multipass --force --params "'/HyperVisor:VirtualBox'"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 refreshenv
 Import-Module "$env:ProgramData\chocolatey\helpers\chocolateyInstaller.psm1"; Update-SessionEnvironment
+
+multipass launch --name relativepath
