@@ -46,6 +46,4 @@ else
   echo "This script is only for Mac. You are using $(uname). Please run the script for $(uname)."
 fi
 
-echo "launching multipass vm"
-multipass launch --name relativepath
 
