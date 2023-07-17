@@ -12,7 +12,7 @@ then
     echo "brew is installed"
   else
     echo "installing brew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 
   echo "checking if nano is installed"
@@ -48,4 +48,3 @@ fi
 
 echo "launching multipass vm"
 multipass launch --name relativepath
-
