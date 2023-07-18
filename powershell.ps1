@@ -50,4 +50,6 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 refreshenv
 Import-Module "$env:ProgramData\chocolatey\helpers\chocolateyInstaller.psm1"; Update-SessionEnvironment
 
-multipass launch --name relativepath
+multipass set local.bridged-network=Wi-Fi
+start-sleep -seconds 5
+multipass launch --name relativepath --bridged
