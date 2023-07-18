@@ -51,5 +51,5 @@ refreshenv
 Import-Module "$env:ProgramData\chocolatey\helpers\chocolateyInstaller.psm1"; Update-SessionEnvironment
 
 multipass set local.bridged-network=Wi-Fi
-start-sleep -seconds 5
+start-sleep -seconds 10
 multipass launch --name relativepath --bridged
