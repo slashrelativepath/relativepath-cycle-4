@@ -8,3 +8,4 @@ fi
 echo "lauching relativepath vm" 
 multipass launch --name relativepath
 
+ 

@@ -46,5 +46,16 @@ else
   echo "This script is only for Mac. You are using $(uname). Please run the script for $(uname)."
 fi
 
+if [ -f ./id_ed25519 ] 
+then
+  echo "ssh key pair already exists"
+else
+  echo "creating ssh key pair" 
+  ssh-keygen -t ed25519 -f "./id_ed25519" -N ''
+fi
+
 echo "launching multipass vm"
 multipass launch --name relativepath
+
+ssh -i ./id_ed25519 ubuntu@192.168.64.17
+
