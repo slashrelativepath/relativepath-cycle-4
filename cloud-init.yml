@@ -1,0 +1,9 @@
+# cloud-config
+users:
+  - default
+  - name: chris
+    groups: sudo
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - # ADD OUR KEY HERE
