@@ -16,15 +16,17 @@ Run the Mac script with the command below
 ```shell
 bash ./darwin.sh
 ```
+
 ## Linux
 Run the Linux script with the command below
 
 ```shell
 bash ./linux.sh
 ```
+
 ## Destroy
 Run this script to destroy virtual machine when done
 
 ```shell
-bash destroy_vm.sh
+bash ./destroy_vm.sh
 ```
