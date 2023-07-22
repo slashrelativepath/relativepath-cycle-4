@@ -39,9 +39,9 @@ fi
 # Set Multipass local driver to Qemu
 if [ "$(multipass get local.driver)" = "qemu" ]
 then
-  echo -e -e "\n==== Qemu local driver set ====\n"
+  echo -e "\n==== Qemu local driver set ====\n"
 else
-  echo -e -e "\n==== Setting Qemu as Multipass local driver ====\n"
+  echo -e "\n==== Setting Qemu as Multipass local driver ====\n"
   multipass set local.driver=qemu
 fi
  
